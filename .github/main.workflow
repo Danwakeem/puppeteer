@@ -42,4 +42,5 @@ action "Push Version Image" {
 
 workflow "Docker" {
   on = "push"
+  resolves = ["Push Version Image"]
 }
