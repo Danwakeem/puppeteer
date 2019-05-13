@@ -39,3 +39,7 @@ action "Push Version Image" {
   needs = ["Push Latest Image", "Create Version Tag"]
   args = "push danwakeem/puppeteer:$VERSION"
 }
+
+workflow "Docker" {
+  on = "push"
+}
